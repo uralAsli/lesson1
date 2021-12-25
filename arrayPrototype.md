@@ -1,4 +1,4 @@
-# Long But Cool Questions 
+# Array prototype functions
 
 
 |Sl.No|  Questions                                                     |
