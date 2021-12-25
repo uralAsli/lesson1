@@ -47,124 +47,25 @@ const myUsers = [
 
 ## Q. Array.prototype.filter()
 
-**1. Template Strings**  
-
-Template literals are string literals allowing embedded expressions.
- 
-**Benefits**
-
-* String interpolation
-* Embedded expressions
-* Multiline strings without hacks
-* String formatting
-* String tagging for safe HTML escaping, localization and more
-
+** Basic filter **  
 ```javascript
-// String Substitution
-let name = "Yeniyil";
-
-// Multiline Strings
-
+//Numbers greater than 7
+let numbers = [1, 3, 6, 8, 11];
+// expected answer = [8,11];
 ```
-
-**2. Spread Operator**  
-Spread operator allows iterables( arrays / objects / strings ) to be expanded into single arguments/elements.
-Call sum function using spread operator
+** Basic filter **  
 ```javascript
-function sum(x, y, z) {
-  return x + y + z;
-}
-
-const numbers = [1, 2, 3];
-
+// filter funny character
+const creatures = [
+    {name: "SpongeBob", personality: "Funny"},
+    {name: "Mater", personality: "Funny"},
+    {name: "Gargamel", personality: "Antagonistic"},
+    {name: "Voldemort", habitat: "Unkind"}
+];
+// expected answer  = [ {name: "SpongeBob", personality: "Funny"}, {name: "Mater", personality: "Funny"}];
 ```
-**2.1. Copying an array**
-
-```javascript
-let fruits = ['Apple','Orange','Banana'];
-
-```
-**2.2. Concatenating arrays**  
-```javascript
-let arr1 = ['A', 'B', 'C'];
-
-let arr2 = ['X', 'Y', 'Z'];
-
-```
-**2.3. Spreading elements together with an individual element **
-Add new fruit to fruits array
-```javascript
-let fruits = ['Apple','Orange','Banana'];
-
-**2.4. Spread syntax for object literals**
-```javascript
-let obj1 = { id: 101, name: 'Jhon Doe' }
-let obj2 = { age: 25, country: 'USA'}
-
-**3. Default Parametrs**
-
-**4. Arrow Function (=>)**  
-```javascript
-var add = (x, y) => x + y;
-```
-**7. Arrow function with `this`**
-```javascript
-var person = {
-  first: "Alex",
-  actions: ["bike", "hike", "ski", "surf"],
-  printActions: function() {
-    var _this = this;
-    this.actions.forEach(function(action) {
-      var str = _this.first + " likes to " + action;
-      console.log(str);
-    });
-  }
-};
-person.printActions();
-
-//ES-6
-var person = {
-  first: "Alex",
-  actions: ["bike", "hike", "ski", "surf"],
-  printActions() {
-    this.actions.forEach(action => {
-      var str = this.first + " likes to " + action;
-      console.log(str);
-    });
-  }
-};
-```
-
-**8. Destructing Assignment**
-```javascript
-const person = {
-  name: "Asli",
-  gender: "Female",
-};
- // print name of person
-
-
-## Q. What is the benefit of using the arrow syntax for a method in a constructor?
-
-The main advantage of using an arrow function as a method inside a constructor is that the value of `this` gets set at the time of the function creation and can't change after that. So, when the constructor is used to create a new object, `this` will always refer to that object. 
-```javascript
-const Person = function(firstName) {
-  this.firstName = firstName;
-  this.sayName1 = function() { console.log(this.firstName); };
-  this.sayName2 = () => { console.log(this.firstName); };
-};
-
-```
-The main takeaway here is that `this` can be changed for a normal function, but the context always stays the same for an arrow function. So even if you are passing around your arrow function to different parts of your application, you wouldn\'t have to worry about the context changing.
-
-<div align="right">
-    <b><a href="#">↥ back to top</a></b>
-</div>
 
 ## Q. Array.prototype.reduce()
-
-An arrow function is a shorter syntax for a function expression and does not have its own **this, arguments, super, or new.target**. These function are best suited for non-method functions, and they cannot be used as constructors.
-
 
 **Arrow functions in ES6 has two limitations**:
 * Don't work with new
