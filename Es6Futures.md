@@ -19,13 +19,6 @@ function sortArgs(...args) {
 }
 ```
 ## Examples:
-**Find 1 in array**
-```javascript
-const arr = [1,2,3];
-// Expected answer [1]
-```
-
-## Q. Primitive Types / Reference Types
 
 **Used to split array elements or object properties**
 ```javascript
@@ -38,4 +31,46 @@ const secondPerson = person;
 person.name = 'ee';
 
 // create purfectPerson :)
+```
+
+**Spread Operator**  
+Spread operator allows iterables( arrays / objects / strings ) to be expanded into single arguments/elements.
+Call sum function using spread operator
+```javascript
+function sum(x, y, z) {
+  return x + y + z;
+}
+
+const numbers = [1, 2, 3];
+
+```
+**Copying an array**
+
+```javascript
+let fruits = ['Apple','Orange','Banana'];
+
+```
+**Concatenating arrays**  
+```javascript
+let arr1 = ['A', 'B', 'C'];
+
+let arr2 = ['X', 'Y', 'Z'];
+
+```
+**Spreading elements together with an individual element **
+Add new fruit to fruits array
+```javascript
+let fruits = ['Apple','Orange','Banana'];
+```
+**Spread syntax for object literals**
+```javascript
+let obj1 = { id: 101, name: 'Jhon Doe' }
+let obj2 = { age: 25, country: 'USA'}
+// Expected result: { "id": 101, "name": "Jhon Doe", "age": 25, "country": "USA" }
+
+```
+**Spreading elements on function calls**
+```javascript
+let fruits = ['Apple','Orange','Banana'];
+// Expected result: Fruits: Apple, Orange and Banana
 ```
