@@ -13,7 +13,7 @@
 
 [Map Doc](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
-**Calling functions on each item in an array**
+**Summing an Array using reduce**
 ```javascript
 // Multiply each element in the array by 3 using map 
 const numberArr = [1, 2, 3];
@@ -47,13 +47,13 @@ const myUsers = [
 
 ## Q. Array.prototype.filter()
 
-** Basic filter **  
+**Basic filter**  
 ```javascript
 //Numbers greater than 7
 let numbers = [1, 3, 6, 8, 11];
 // expected answer = [8,11];
 ```
-** Basic filter **  
+**Basic filter**  
 ```javascript
 // filter funny character
 const creatures = [
@@ -67,18 +67,25 @@ const creatures = [
 
 ## Q. Array.prototype.reduce()
 
-**Arrow functions in ES6 has two limitations**:
-* Don't work with new
-* Fixed this bound to scope at initialisation
+**Summing each value in array**:
 
-**When should not use Arrow Functions**  
-**1. Object methods**  
-When you call cat.jumps, the number of lives does not decrease. It is because this is not bound to anything, and will inherit the value of this from its parent scope.
+![alt text](https://miro.medium.com/max/1210/1*4PlcDrCnIIGHL-bEQk0qmQ.png)
+
 ```javascript
-var cat = {
-  lives: 9,
-  jumps: () => {
-    this.lives--;
-  }
-}
+
+let data = [2, 4, 6, 8];
+// expected answer = 20;
+```
+**Counting Occurrences of Items in an Array**  
+```javascript
+// filter funny character
+const fruits = [ 'Banana', 'Dragon', 'Apple', 'Orange', 'Pear', 'Elderberry']
+// expected answer 10
+```
+
+**Getting Max Length in Array**  
+```javascript
+// getting max-length || min-length value from an array using reduce
+const fruits = [ 'Banana', 'Dragon', 'Apple', 'Orange', 'Pear', 'Elderberry']
+console.log(max); // 10
 ```
